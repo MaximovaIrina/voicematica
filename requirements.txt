@@ -1,0 +1,9 @@
+flask 
+sentencepiece
+speechbrain
+soundfile
+torch
+torchvision
+torchaudio
+datasets
+git+https://github.com/huggingface/transformers
