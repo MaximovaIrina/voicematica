@@ -3,6 +3,6 @@
 * source venv/bin/activate
 * pip install -r requirements.txt
 * python VoiceMatica_app.py
-* ngrok http 5000
-* https://api.telegram.org/bot5523151975:AAHPQpIYJ7OfQ5P9pqfQURQ89uqLjhVZFMk/setWebhook?url=https://c5af-2003-e9-cf0a-3b1b-ecd4-a9db-1eec-f09f.ngrok-free.app
+* ngrok http 5002
+* https://api.telegram.org/bot6077765059:AAH2-lE5LrCcALjtWe7yiA6D8KEW25tAMP0/setWebhook?url=https://605a-79-219-254-188.eu.ngrok.io
 
