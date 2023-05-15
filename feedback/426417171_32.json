@@ -1,0 +1,21 @@
+{
+    "update_id": 942109688,
+    "message": {
+        "message_id": 940,
+        "from": {
+            "id": 426417171,
+            "is_bot": false,
+            "first_name": "A",
+            "username": "louis_vuitton_official",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": 426417171,
+            "first_name": "A",
+            "username": "louis_vuitton_official",
+            "type": "private"
+        },
+        "date": 1683734665,
+        "text": "топово, я бы даже юзал"
+    }
+}

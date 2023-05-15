@@ -1,0 +1,23 @@
+{
+    "update_id": 942109757,
+    "message": {
+        "message_id": 1093,
+        "from": {
+            "id": 762583084,
+            "is_bot": false,
+            "first_name": "Irina",
+            "last_name": "Maximova",
+            "username": "irusvirus",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 762583084,
+            "first_name": "Irina",
+            "last_name": "Maximova",
+            "username": "irusvirus",
+            "type": "private"
+        },
+        "date": 1683818407,
+        "text": "Круто все понравилось"
+    }
+}

@@ -1,4 +1,4 @@
-flask 
+flask
 sentencepiece
 speechbrain
 soundfile
@@ -6,4 +6,13 @@ torch
 torchvision
 torchaudio
 datasets
-git+https://github.com/huggingface/transformers
+transformers
+emoji
+librosa
+num2words
+ssml_builder
+nltk
+omegaconf
+protobuf==3.20.*
+python-telegram-bot
+transliterate

@@ -1,4 +1,8 @@
+import numpy as np
 import requests
+import soundfile as sf
+from VoiceMatica import VoiceMatica
+
 
 from vm_token import TOKEN
 
@@ -76,11 +80,11 @@ def send_settings_speed(chat_id):
                 },],[
                 {
                     "callback_data": "ic_1.05_speed",
-                    "text": "x1.25"
+                    "text": "x1.05"
                 },
                 {
                     "callback_data": "ic_1.15_speed",
-                    "text": "x1.25"
+                    "text": "x1.15"
                 },
                 {
                     "callback_data": "ic_1.25_speed",
@@ -184,14 +188,30 @@ def send_settings_atmosphere(chat_id):
     return r
 
 
-def send_audio(chat_id, file, title):
+def send_audio(chat_id, audio: np.ndarray, title: str):
     url = f'https://api.telegram.org/bot{TOKEN}/sendAudio'
     payload = {
         'chat_id': chat_id,
         'title': title,
         'parse_mode': 'HTML'
     }
-    with open(file, 'rb') as audio:
+    sf.write(f"send_audio/{chat_id}.wav", audio, samplerate=VoiceMatica.SR)
+    with open(f"send_audio/{chat_id}.wav", 'rb') as audio:
         files = {'audio': audio.read()}
+    r = requests.post(url, data=payload, files=files).json()
+    return r
+
+
+def send_voice(chat_id, audio: np.ndarray):
+    url = f'https://api.telegram.org/bot{TOKEN}/sendVoice'
+    duration = len(audio)/VoiceMatica.SR
+    payload = {
+        'chat_id': chat_id,
+        'duration': duration,
+        'parse_mode': 'HTML'
+    }
+    sf.write(f"send_audio/{chat_id}.wav", audio, samplerate=VoiceMatica.SR)
+    with open(f"send_audio/{chat_id}.wav", 'rb') as audio:
+        files = {'voice': audio.read()}
     r = requests.post(url, data=payload, files=files).json()
     return r
